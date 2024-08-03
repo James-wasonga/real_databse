@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+    .wel{
+        color:blue;
+        font-size: 30px;
+    }
+    body{
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: rgb(249, 246, 243);
+       
+    }
+    .page-header{
+        background-color: grey;
+        color: white;
+        padding: 20px;
+    }
+    .page-header h1{
+        color: blue;
+        margin: 0;
+
+    }
+    .page-header nav ul{
+        padding: 0;
+        list-style: none;
+        display: flex;
+    }
+    .page-header nav ul li{
+        margin-right: 20px;
+        margin-left: 120px;
+        margin-top: -20px;
+        position: relative;
+    }
+
+    .page-header nav ul li a{
+        color: white;
+        font-size: 15px;
+        text-decoration: none;
+    }
+
+    .page-header nav ul li a:hover{
+        color: yellow;
+        font-size: 22px;
+    }
+    #name{
+        margin-left: 900px;
+        color: yellow;
+    }
+    .summary{
+        width: 300px;
+        height: 400px;
+        background-color: white;
+        margin-top: 20px;
+        margin-left: 60px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .summary:hover{
+        transform: translateY(-10px);
+    }
+    #summary{
+        font-size: 30px;
+        font-weight: 100px;
+    }
+    #sum-card{
+        width: 200px;
+        height: 20px;
+        display: flex;
+        margin-left: 20px;
+
+    }
+    #first{
+        background-color: greenyellow;
+        margin-right:2px;
+    }
+    #first-btn{
+        border-radius: 50px;
+        background-color: white;
+    }
+    .par{
+        color: black;
+        margin-top: -20px;
+        margin-left: 30px;
+
+
+    }
+
+
+    #second{
+       background-color: whitesmoke;
+       margin-left: -10px;
+
+    }
+    #second-btn{
+        border-radius: 50px;
+        background-color: green;
+        margin-left: 20px;
+
+    }
+    .pars{
+        color: black;
+        margin-top: -20px;
+        margin-left: 400px;
+        padding-left: 120px;
+    }
+
+    .amt-borrow{
+        margin-top: 60px;
+        align-items: center;
+        margin-left: 80px;
+
+    }
+
+    .amt-borrows{
+        margin-top: 100px; 
+        align-items: center;
+        margin-left: 80px;
+    }
+    #amount{
+        color: brown;
+        font-size: 20px;
+        margin-left: -20px;
+
+    }
+
+    .mini-stmt{
+        width: 600px;
+        height: 150px;
+        background-color: white;
+        margin-left: 60px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        font-size: 20px;
+        font-weight: 30px;
+        margin-left:500px;
+        position: relative;
+        margin-top: -100px;
+        
+    }
+    .loan-calc{
+        width: 600px;
+        height: 100px;
+        background-color: white;
+        margin-left: 300px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        position: relative;
+        margin-top: -90px;
+        
+    }
+
+</style>
+</head>
+<body>
+<header class="page-header">
+    <div>
+        <h1>RustLoan</h1>
+    </div>
+    <nav>
+        <ul class="items">
+            <li><a href="">Dashboard</a></li>
+            <li><a href="">Accounts</a></li>
+            <li><a href="">Payments</a></li>
+            <li><a href="">PFM</a></li>
+            <li id="name">James</li>
+
+        </ul>
+</nav>
+</header>
+
+<div class="summary">
+    <h1 id="summary">Summary</h1>
+    <div id="sum-card">
+        <div id="first">
+            <button id="first-btn">3</button>
+            <p class="par">Conventional</p>
+         </div>
+        <div id="inner-sum-card">
+            <button id="second-btn">7</button>
+            <p class="par">Islamic</p>
+        </div>
+    </div>
+    <div class="amt-borrow">
+    <p id="total">Total Borrowing</p>
+    <p id="amount">Ksh 4,000,000.00</p>
+</div>
+
+<!-- <img src="amount.png" alt="amount" id="amt-img"/> -->
+<div class="amt-borrows">
+    <p id="total">Current Outstanding</p>
+    <p id="amount">Ksh 300,000.00</p>
+</div>
+</div>
+
+<div class="mini-stmt">
+    <h1>Mini statement</h1>
+    <button class="btn-mini">
+        <p>xxxxxxxx003-home loan</p>
+        <button>^</button>
+    </button>
+</div>
+
+<div class="loan-calc">
+    <h1>Loan Calculator</h1>   
+        <p>Check your eligibility!</p>     
+</div>
+
+</body>
+</html>

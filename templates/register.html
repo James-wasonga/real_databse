@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css"/>
+    <style>
+        .error{
+            color: red;
+        }
+        *{
+            margin: 0;
+            box-sizing: content-box;
+            }
+            .contents{
+            margin: 0 auto;
+            width: 450px;
+            }
+            .top{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            width: 60%;
+            margin: 0 auto;
+            }
+            .name{
+            align-self: center;
+            font-weight: bold;
+            font-size: 3vw;
+            color: blue;
+            }
+            #error{
+            color: red;
+            font-style: italic;
+            font-size: 1.5vw;
+            padding-top: 20px;
+            }
+            .details{
+            text-align: center;
+            margin-top: 20px;
+            padding-top: 20px;
+            }
+            input{
+            margin: 7px;
+            height: 35px;
+            background-color: #d3d3d3;
+            border: none;
+            }
+            #data{
+            float: left;
+            }
+            .btns{
+            display: flex;
+            justify-content: center;
+            margin: 10px;
+            gap: 45px;
+            }
+            a{
+            color: #FF0000;
+            text-decoration: none;
+            }
+            #sbmt{
+            height: 25px;
+            background-color: #0000cd;
+            color: #fff;
+            /* disabled: true; */
+            }
+            .fields{
+            margin: 10px auto;
+            padding: 40px 5px 30px 10px;
+            }
+        
+            #cancel{
+            background-color: #E56B6B;
+            color:white;
+            font-size: 18px;
+            }
+        
+            button{
+            border: none;
+            }
+        
+            input[type=checkbox]{
+            height: unset;
+            margin-right: 15px;
+            }
+            #det{
+            color: #939393;
+            }
+            
+            .form{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            padding: 25px;
+            margin: 25px;
+            }
+            .sign{
+            text-align: center;
+            margin-bottom: 50px;
+            }
+            hr{
+            width: 60%;
+            margin: 0 auto;
+            }
+            .forgot.p{
+            align-self: flex-end;
+            font-size: 15px;
+            color: #939393;
+            }
+            
+    </style>
+</head>
+<body>
+    {% if let Some(error_message) = error %}
+    <p class="error">{{error_message}}</p>
+    {% endif %}
+<div class="contents" >
+    <div class="top">
+        <p class="name">RustLoan</p>
+        <p>Loans without Limits</p>
+    </div>
+
+
+    <div class="details">
+        <p><b>Sign Up</b></p><br>
+        <p id="det">Enter your details to create account</p>
+    </div>
+    <form class="form" class="form" action="/register" method="post">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name"><br/>
+
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email"><br/>
+
+        <label for="email">Bio:</label>
+        <input type="bio" id="bio" name="bio"><br/>
+
+        
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Passw"><br/>
+        <input type="checkbox" required id="data"><label for="data">I agree to my data being processed in accordance with the privacy &nbsp;policy</label><br>
+        <input type="checkbox" required id="terms"><label for="terms">I agree to the <a href="#">Terms and Conditions</a></label>
+
+        <div class="btns">
+        <button id="sbmt" type="submit">Register</button>
+        <button id="cancel" ><a href="login.html">Cancel</a></button>
+        </div>
+        
+
+    </form>
+</div>
+</body>
+</html>
+
+
+<div class="summary">
+    <h1 id="summary">Summary</h1>
+    <button id="sum-card">
+        <div id="first">
+            <button id="first-btn">3</button>
+            <p class="par">Conventional</p>
+         </div>
+        <div id="second">
+            <button id="second-btn">7</button>
+            <p class="pars">Islamic</p>
+        </div>
+    </button>
+    <div class="amt-borrow">
+    <p id="total">Total Borrowing</p>
+    <p id="amount">Ksh 4,000,000.00</p>
+</div>
+</div>
+
+

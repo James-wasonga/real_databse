@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .error{
+            color: red;
+        }
+        .message{
+            color: blue;
+        }
+        *{
+            margin: 0;
+            box-sizing: content-box;
+            }
+        .contents{
+            margin: 0 auto;
+            box-sizing: 450px;
+        }
+        .top{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            width: 60%;
+            margin: 0 auto;
+            }
+            .name{
+                align-self: center;
+                font-weight: bold;
+                font-size: 3vw;
+                color:  blue;
+            }
+
+        #sbmt{
+            height: 25px;
+            background-color: #0000cd;
+            color: #fff;
+            /* disabled: true; */
+            }
+        .form{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            padding: 25px;
+            margin: 25px;
+            }
+            .details{
+            text-align: center;
+            margin-top: 20px;
+            padding-top: 20px;
+            }
+            input{
+                margin: 7px;
+                height: 35px;
+                background-color: #d3d3d3;
+                border: none;
+                }
+        a{
+            color: #FF0000;
+            text-decoration: none;
+            }
+        input[type=checkbox]{
+            height: unset;
+            margin-right: 15px;
+            }
+            #det{
+            color: #939393;
+            }
+        .forgot.p{
+        align-self: flex-end;
+        font-size: 15px;
+        color: #939393;
+        }
+        .sign{
+            text-align: center;
+            margin-bottom: 50px;
+        }
+    </style>
+</head>
+<body>
+    {% if let Some(error_message) = error %}
+    <p class="error">{{error_message}}</p>
+    {% endif %}
+
+    {% if let Some(message) = error %}
+    <p class="message">{{message}}</p>
+    {% endif %}
+<div class="contents">
+    <div class="top">
+        <p class="name">RustLoan</p>
+        <p>Loans without Limits</p>
+    </div>
+
+    <p class="details"><b>Sign in To RustLoan Portal</b><br/>
+    <form class="form" action="/login" method="post">
+        <label for="email">Email:</label><br/>
+        <input type="text" name="email" name="email"><br/>
+
+        
+        <label for="password">Password</label><br/>
+        <input type="password" name="password" name="password"><br/>
+
+        <p class="p"><a class="forgot" href="">Forget Password</a></p>
+        <button id="sbmt"  type="submit">login</button>
+
+    </form>
+    <p class="sign">Don't have an account yet? <a href="register.html">Sign Up</a></p>
+</div>
+</body>
+</html>
